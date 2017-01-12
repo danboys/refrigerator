@@ -1,0 +1,20 @@
+{
+  "name": "refrigerator",
+  "description": "refrigerator",
+  "main": "",
+  "authors": [
+    "최현원 <domfamwilly@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/danboys/refrigerator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "^1.3.3"
+  }
+}

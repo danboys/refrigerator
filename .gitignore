@@ -1,3 +1,5 @@
 .idea/modules.xml
 .idea/refri.iml
 .idea/workspace.xml
+node_modules
+bower_components

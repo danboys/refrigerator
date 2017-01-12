@@ -1,5 +1,5 @@
 {
-  "name": "냉장고를 부탁해",
+  "name": "refrigerator",
   "version": "1.0.0",
   "description": "refrigerator",
   "main": "",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/danboys/refrigerator/issues"
   },
-  "homepage": "https://github.com/danboys/refrigerator#readme"
+  "homepage": "https://github.com/danboys/refrigerator#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "handlebars": "^4.0.6",
+    "handlebars-helpers": "^0.7.7",
+    "requirejs": "^2.3.2"
+  }
 }
