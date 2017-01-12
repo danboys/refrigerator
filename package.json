@@ -1,0 +1,19 @@
+{
+  "name": "냉장고를 부탁해",
+  "version": "1.0.0",
+  "description": "refrigerator",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danboys/refrigerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danboys/refrigerator/issues"
+  },
+  "homepage": "https://github.com/danboys/refrigerator#readme"
+}
