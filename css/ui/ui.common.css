@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/*
+ * reset
+ * 작성자 :
+ */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 10px !important;
+}
+
+@media screen and (max-width: 320px) {
+
+    html {
+        font-size: 9px !important;
+    }
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+body, input, textarea, select, button, table {
+    font-size: 1.2rem;
+    line-height: 1.6em
+}
+
+body {
+    font-family: Helvetica, AppleSDGothicNeo-Regular;
+    -webkit-text-size-adjust: none
+}
+
+img, fieldset {
+    border: 0
+}
+
+ul, ol {
+    list-style: none
+}
+
+em, address {
+    font-style: normal
+}
+
+a {
+    color: #111;
+    text-decoration: none
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+hr {
+    display: none !important
+}
+
+caption {
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    color: transparent
+}
+
+h1, h2, h3, h4, h5, strong, b, th {
+    font-weight: normal
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none
+}
+
+button {
+    -webkit-apperance: none;
+    cursor: pointer;
+    border: 0
+}
+
+html[data-useragent*="Chrome"] body {
+    font-family: AppleSDGothicNeo, '나눔고딕', NanumGothic, '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif !important
+}
+
+article, aside, footer, header, main, nav, section {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+}
+
+caption {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+}
+
