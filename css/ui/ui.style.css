@@ -4,7 +4,5 @@
 @import "../ui/ui.layout.css";
 /* 폼 요소 */
 @import "../ui/ui.form.css";
-/* 캘린더 */
-@import "../lib/fullcalendar.css";
 /* 페이지 */
 @import "../ui/ui.page.css";
