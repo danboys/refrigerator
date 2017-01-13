@@ -26,6 +26,7 @@
 	<script type="text/javascript" src="../../js/ui/ui.common.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.util.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.init.js"></script>
+	<script type="text/javascript" src="../../js/templates/sample.js"></script>
 </head>
 <body>
 <div id='personContainer'></div>
@@ -48,8 +49,7 @@
 	var viewGroup = Backbone.View.extend({
 		el: $('#personContainer'),
 		render: function () {
-			var source = $('#GroupTemplate').html();
-			var template = Handlebars.compile(source);
+			var template = refri['sample'];
 			var html = template({
 				name: "Tim",
 				age: 5
@@ -57,13 +57,9 @@
 			this.$el.html(html);
 		},
 		initialize: function () {
-			this.collection.on('add', this.render, this);
 		}
 	});
-
-
 	var GroupView = new viewGroup();
-
 	$(document).ready(function () {
 		GroupView.render();
 	});
