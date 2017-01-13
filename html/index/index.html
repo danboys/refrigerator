@@ -21,13 +21,116 @@
 	<link rel="stylesheet" type="text/css" href="../../css/ui/ui.style.css"/>
 	<script type="text/javascript" src="../../js/jquery/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="../../js/jquery/handlebars.min.js"></script>
-	<script type="text/javascript" src="../../js/jquery/he"></script>
-
-	<script type="text/javascript" src="../../js/jquery/backbone.js"></script>
 	<script type="text/javascript" src="../../js/jquery/underscore.js"></script>
+	<script type="text/javascript" src="../../js/jquery/backbone.js"></script>
+	<script type="text/javascript" src="../../js/ui/ui.common.js"></script>
+	<script type="text/javascript" src="../../js/ui/ui.util.js"></script>
+	<script type="text/javascript" src="../../js/ui/ui.init.js"></script>
 </head>
 <body>
+<div id='personContainer' ></div>
+<hr>
+<div id='GroupContainer' ></div>
 
+
+<script id="PersonTemplate" type="text/x-handlebars-template">
+	<div>
+		{{name}}
+		{{age}}
+	</div>
+</script>
+
+<script id="GroupTemplate" type="text/x-handlebars-template">
+	<div>
+		{{#each []}}
+		{{this.name}}
+		{{this.age}}
+	<br/>
+		{{/each}}
+	</div>
+</script>
+
+
+<script>
+
+	// Stub out the person model
+	var modelPerson = Backbone.Model.extend({
+	});
+
+	// Create a collection of persons
+	var collectionGroup = Backbone.Collection.extend({
+		model: modelPerson
+	});
+
+	// Define the view for a single person
+	var viewPerson = Backbone.View.extend({
+		render: function() {
+			// This is method that can be called
+			// once an object is init. You could
+			// also do this in the initialize event
+			var source = $('#PersonTemplate').html();
+			var template = Handlebars.compile(source);
+			var html = template(this.model.toJSON());
+			this.$el.html(html);
+		}
+	});
+
+	// Define the view for Group
+	var viewGroup = Backbone.View.extend({
+		render: function() {
+			// This is method that can be called
+			// once an object is init. You could
+			// also do this in the initialize event
+			var source = $('#GroupTemplate').html();
+			var template = Handlebars.compile(source);
+			var html = template(this.collection.toJSON());
+			this.$el.html(html);
+		},
+		initialize: function(){
+			this.collection.on('add', this.render, this);
+		}
+	});
+
+	//THANKS Rameş Aliyev for the feedback on making this cleaner
+	// https://gist.github.com/4682984
+
+	// Create instance of Group Collection
+	var oGroup = new collectionGroup();
+
+	// Create new instances of the person models
+	var oPerson = new modelPerson({name: "Tim", age: 5});
+	var oPerson2 = new modelPerson({name: "Jill", age: 15});
+
+	// Create instances of the views
+	var personView = new viewPerson({
+		model: oPerson
+	});
+	var GroupView = new viewGroup({
+		collection: oGroup
+	});
+
+	$(document).ready(function(){
+		// We have to do this stuff in the dom ready
+		// so that the container objects get built out
+
+		// Set el of the views.
+		personView.$el = $('#personContainer');
+		GroupView.$el = $('#GroupContainer');
+
+		// Add them to a new instance of the Group collection
+		oGroup.add(oPerson);
+		oGroup.add(oPerson2);
+
+		// Render the views. If you are using the initialize
+		// method then you do not have to do this step.
+		personView.render();
+		//GroupView.render();
+
+		// Try on console!
+		// Group.add(new Person({name: 'Rames', age:'23'}));
+
+	});
+</script>
 
 </body>
 </html>
