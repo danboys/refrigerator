@@ -1,5 +1,7 @@
+var timer = require("grunt-timer");
 module.exports = function(grunt) {
 
+  timer.init(grunt);
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -12,13 +14,23 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'js/templates/sample.js': 'js/templates/*.hbs'
+          'js/templates/templates.js': ['js/templates/*.hbs','js/templates/**/*.hbs']
+        }
+      }
+    },
+    watch: {
+      scripts: {
+        files: ['js/templates/*.hbs'],
+        tasks: ['handlebars'],
+        options: {
+          spawn: false
         }
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-handlebars');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
   grunt.registerTask('default', ['handlebars']);

@@ -1,0 +1,294 @@
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">생활상식</h2>
+		<a href="/life/around/around01.do" class="btn _btn_move_sub">더보기
+			<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<!-- 상단 세로형, 하단 가로형 이미지 리스트 -->
+		<div class="grid_inner thumb_plus_horz_list">
+			<!-- 세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_vert_list none_padding_top">
+				<!--어드민-->
+				<li>
+					<a href="http://m.water.or.kr/life/around/around01_detail.do?CONTS_ID={{sense.getJsonData.0.contsId}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/{{sense.getJsonData.0.imgUrl}}" alt="">
+						</div>
+						<p class="list_title">{{sense.getJsonData.0.title}}</p>
+						<p class="list_txt">{{sense.getJsonData.0.someHead}}</p>
+					</a>
+				</li>
+				<li>
+					<a href="http://m.water.or.kr/life/around/around01_detail.do?CONTS_ID={{sense.getJsonData.1.contsId}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/{{sense.getJsonData.1.imgUrl}}" alt="">
+						</div>
+						<p class="list_title">{{sense.getJsonData.1.title}}</p>
+						<p class="list_txt">{{sense.getJsonData.1.someHead}}</p>
+					</a>
+				</li>
+			</ul> <!-- //세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<!-- 가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_horz_list">
+				<!--어드민데이터-->
+				{{#each sense.getJsonData}}
+					{{#isRange @index 2 5}}
+						<li>
+							<a href="http://m.water.or.kr/life/around/around01_detail.do?CONTS_ID={{contsId}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/{{imgUrl}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{title}}</p>
+									<p class="list_txt">{{someHead}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!-- //가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+		</div> <!-- //상단 세로형, 하단 가로형 이미지 리스트 -->
+	</div>
+</div>
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">물과건강</h2>
+		<a href="http://m.water.or.kr/life/around/around02.do" class="btn _btn_move_sub">더보기
+			<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<!-- 상단 세로형, 하단 가로형 이미지 리스트 -->
+		<div class="grid_inner thumb_plus_horz_list">
+			<!-- 세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_vert_list none_padding_top">
+				<li>
+					<a href="http://m.water.or.kr/life/around/around02_detail.do?CONTS_ID={{health.getJsonData.0.contsId}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/{{health.getJsonData.0.imgUrl}}" alt="">
+						</div>
+						<p class="list_title">{{health.getJsonData.0.title}}</p>
+						<p class="list_txt">{{health.getJsonData.0.someHead}}</p>
+					</a>
+				</li>
+				<li>
+					<a href="http://m.water.or.kr/life/around/around02_detail.do?CONTS_ID={{health.getJsonData.1.contsId}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/{{health.getJsonData.1.imgUrl}}" alt="">
+						</div>
+						<p class="list_title">{{health.getJsonData.1.title}}</p>
+						<p class="list_txt">{{health.getJsonData.1.someHead}}</p>
+					</a>
+				</li>
+			</ul> <!-- //세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<!-- 가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_horz_list">
+				{{#each health.getJsonData}}
+					{{#isRange @index 2 5}}
+						<li>
+							<a href="http://m.water.or.kr/life/around/around02_detail.do?CONTS_ID={{contsId}}">
+								<div class="list_img">
+									<img src="//www.water.or.kr/{{imgUrl}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{title}}</p>
+									<p class="list_txt">{{someHead}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+
+			</ul> <!-- //가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+		</div> <!-- //상단 세로형, 하단 가로형 이미지 리스트 -->
+	</div>
+</div>
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">강이야기</h2>
+		<a href="http://m.water.or.kr/life/history/history01.do" class="btn _btn_move_sub">더보기
+			<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<!-- 상단 세로형, 하단 가로형 이미지 리스트 -->
+		<div class="grid_inner thumb_plus_horz_list">
+			<!-- 세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_vert_list none_padding_top">
+				<li>
+					<a href="http://m.water.or.kr/life/history/history01_detail.do?riverSeqno={{river.getJsonData.0.riverSeqno}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/images/egovframework/life/history/{{river.getJsonData.0.riverPhoto}}" alt="">
+						</div>
+						<p class="list_title">{{river.getJsonData.0.riverTitle}}</p>
+						<p class="list_txt">{{unwrapHtml river.getJsonData.0.riverDiscription}}</p>
+					</a>
+				</li>
+				<li>
+					<a href="http://m.water.or.kr/life/history/history01_detail.do?riverSeqno={{river.getJsonData.1.riverSeqno}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/images/egovframework/life/history/{{river.getJsonData.1.riverPhoto}}" alt="">
+						</div>
+						<p class="list_title">{{river.getJsonData.1.riverTitle}}</p>
+						<p class="list_txt">{{unwrapHtml river.getJsonData.1.riverDiscription}}</p>
+					</a>
+				</li>
+			</ul> <!-- //세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<!-- 가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_horz_list">
+				{{#each river.getJsonData}}
+					{{#isRange @index 2 5}}
+						<li>
+							<a href="http://m.water.or.kr/life/history/history01_detail.do?riverSeqno={{riverSeqno}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/images/egovframework/life/history/{{riverPhoto}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{riverTitle}}</p>
+									<p class="list_txt">{{riverDiscription}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!-- //가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+		</div> <!-- //상단 세로형, 하단 가로형 이미지 리스트 -->
+	</div>
+</div>
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">여행</h2>
+		<a href="http://m.water.or.kr/life/tour/tour03.do" class="btn _btn_move_sub">더보기
+			<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<!-- 상단 세로형, 하단 가로형 이미지 리스트 -->
+		<div class="grid_inner thumb_plus_horz_list">
+			<!-- 세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_vert_list none_padding_top">
+				<li>
+					<a href="http://m.water.or.kr/life/tour/tour03_detail.do?tourNum={{tour.getJsonData.0.turseq}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/images/egovframework/life/{{tour.getJsonData.0.thumbnailNm}}" alt="">
+						</div>
+						<p class="list_title">{{tour.getJsonData.0.blogTitle}}</p>
+						<p class="list_txt">{{tour.getJsonData.0.blogContent}}</p>
+					</a>
+				</li>
+				<li>
+					<a href="http://m.water.or.kr/life/tour/tour03_detail.do?tourNum={{tour.getJsonData.1.turseq}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/images/egovframework/life/{{tour.getJsonData.1.thumbnailNm}}" alt="">
+						</div>
+						<p class="list_title">{{tour.getJsonData.1.blogTitle}}</p>
+						<p class="list_txt ">{{tour.getJsonData.1.blogContent}}</p>
+					</a>
+				</li>
+			</ul> <!-- //세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<!-- 가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_horz_list">
+				{{#each tour.getJsonData}}
+					{{#isRange @index 2 5}}
+						<li>
+							<a href="http://m.water.or.kr/life/tour/tour03_detail.do?tourNum={{turseq}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/images/egovframework/life/{{thumbnailNm}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{blogTitle}}</p>
+									<p class="list_txt">{{blogContent}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!-- //가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+		</div> <!-- //상단 세로형, 하단 가로형 이미지 리스트 -->
+	</div>
+</div>
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">축제/행사</h2>
+		<a href="http://m.water.or.kr/life/culture/culture01.do" class="btn">더보기
+			<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<div class="grid_inner">
+			<!-- 상단 큰 이미지 가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_big_horz_list none_padding_top">
+				{{#each festival.getJsonData}}
+					<li>
+						<a href="http://m.water.or.kr/life/culture/culture01_detail.do?contentid={{festivalCd}}" class="_btn_move_sub">
+							<div class="list_img">
+								{{#if imageUrlInfo}}
+									<img src="{{removehttp imageUrlInfo}}" alt="">
+								{{else}}
+									<img src="//www.water.or.kr/upload/festival/thumb/{{referenceUrlInfo}}" alt="">
+								{{/if}}
+							</div>
+							<div class="list_info">
+								<p class="list_title">{{festivalNm}}</p>
+								<ul class="list_txt">
+									<li>기간 : {{festivalStartDt}} ~ {{festivalEndDt}}</li>
+									<li>장소 : {{locationNm}}</li>
+								</ul>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+			</ul> <!-- //상단 큰 이미지 가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+		</div>
+	</div>
+</div>
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">워터스포츠</h2>
+		<a href="http://m.water.or.kr/life/culture/culture02.do" class="btn">더보기
+			<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<!-- 상단 세로형, 하단 가로형 이미지 리스트 -->
+		<div class="grid_inner thumb_plus_horz_list">
+			<!-- 세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_vert_list none_padding_top">
+				<li>
+					<a href="http://m.water.or.kr/life/culture/culture02_detail.do?CONTS_ID={{waterSports.getJsonData.0.contsId}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/{{waterSports.getJsonData.0.imgUrl}}" alt="">
+						</div>
+						<p class="list_title">{{waterSports.getJsonData.0.title}}</p>
+						<p class="list_txt">{{waterSports.getJsonData.0.someHead}}</p>
+					</a>
+				</li>
+				<li>
+					<a href="http://m.water.or.kr/life/culture/culture02_detail.do?CONTS_ID={{waterSports.getJsonData.1.contsId}}" class="_btn_move_sub">
+						<div class="list_img">
+							<img src="//www.water.or.kr/{{waterSports.getJsonData.1.imgUrl}}" alt="">
+						</div>
+						<p class="list_title">{{waterSports.getJsonData.1.title}}</p>
+						<p class="list_txt">{{waterSports.getJsonData.1.someHead}}</p>
+					</a>
+				</li>
+			</ul> <!-- //세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<!-- 기로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+			<ul class="wa_thumbnail_horz_list">
+				{{#each waterSports.getJsonData}}
+					{{#isRange @index 2 5}}
+						<li>
+							<a href="http://m.water.or.kr/life/culture/culture02_detail.do?CONTS_ID={{contsId}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/{{imgUrl}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{title}}</p>
+									<p class="list_txt">{{someHead}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!-- 기로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+		</div> <!-- //상단 세로형, 하단 가로형 이미지 리스트 -->
+	</div>
+</div>
+<div id="weather_story"></div>
+<div id="city_story"></div>

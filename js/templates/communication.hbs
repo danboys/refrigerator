@@ -1,0 +1,175 @@
+<!-- area_contents -->
+<div class="area_contents area_contents_my_water_story">
+	<div class="box_header">
+		<h2 class="contents_title">나의 물이야기 <span class="row2">물과 관련된 여러분의 <br> 이야기를 공유해요</span></h2>
+		<a href="http://m.water.or.kr/life/waterhistory/waterhistory01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents">
+		<div class="grid_inner">
+			<!--  가로형 이미지 리스트 (텍스트 영역 3줄) -->
+			<ul class="wa_thumbnail_horz_list col3">
+				{{#each myWaterStory.getJsonData }}
+					{{#isRange @index 0 4}}
+						<li>
+							<a href="http://m.water.or.kr/life/waterhistory/waterhistory01_detail.do?ntt_id={{ntt_id}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/upload/{{ref_url}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{ntt_sj}}</p>
+									<p class="list_txt">{{removeHtml ntt_cn}}</p>
+									<ul class="by">
+										<li>등록자 : {{frst_register_id}}</li>
+										<li>등록일 : {{frst_regist_pnttm}}</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!-- //가로형 이미지 리스트 (텍스트 영역 3줄) -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">포토 갤러리 <span class="row2">물과 관련된 다양한 사진을 <br> 함께 공유해요</span></h2>
+		<a href="http://m.water.or.kr/life/gallery/gallery01.do" class="btn _btn_move_sub">더보기<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents">
+		<div class="grid_inner">
+			<!--  갤러리 리스트 -->
+			<ul class="gallery_list">
+				<li>
+					<h3 class="gallery_title">자연</h3>
+					<!-- 세로형 이미지 리스트 (텍스트 영역 1줄) -->
+					<ul class="wa_thumbnail_vert_list">
+						{{#each gallery01.getJsonData}}
+							{{#isRange @index 0 2}}
+								<li>
+									<a href="http://m.water.or.kr/life/gallery/gallery01_detail.do?ntt_id={{ntt_id}}" class="_btn_move_sub">
+										<div class="list_img">
+											<img src="//www.water.or.kr/{{ref_url_thumbnail}}" alt="">
+										</div>
+										<ul class="gallery_txt">
+											<li class="title" style="font-weight: bold;">{{ntt_sj}}</li>
+                                            <!--<li class="title">제목 : {{ntt_sj}}</li>-->
+                                            <!--<li class="name">등록자 : {{ntcr_nm}}</li>-->
+                                            <!--<li class="conference">{{ntt_cn}}</li>-->
+                                        </ul>
+									</a>
+								</li>
+							{{/isRange}}
+						{{/each}}
+					</ul> <!-- //세로형 이미지 리스트 (텍스트 영역 1줄) -->
+				</li>
+				<li>
+					<h3 class="gallery_title">레져 </h3>
+					<!-- 세로형 이미지 리스트 (텍스트 영역 1줄) -->
+					<ul class="wa_thumbnail_vert_list">
+						{{#each gallery02.getJsonData}}
+							{{#isRange @index 0 2}}
+								<li>
+									<a href="http://m.water.or.kr/life/gallery/gallery02_detail.do?ntt_id={{ntt_id}}" class="_btn_move_sub">
+										<div class="list_img">
+											<img src="//www.water.or.kr/{{ref_url_thumbnail}}" alt="">
+										</div>
+										<ul class="gallery_txt">
+											<li class="title" style="font-weight: bold;">{{ntt_sj}}</li>
+											<!--<li class="title">제목 : {{ntt_sj}}</li>-->
+											<!--<li class="name">등록자 : {{ntcr_nm}}</li>-->
+											<!--<li class="conference">{{ntt_cn}}</li>-->
+										</ul>
+									</a>
+								</li>
+							{{/isRange}}
+						{{/each}}
+					</ul> <!-- //세로형 이미지 리스트 (텍스트 영역 1줄) -->
+				</li>
+				<li>
+					<h3 class="gallery_title">생활</h3>
+					<!-- 세로형 이미지 리스트 (텍스트 영역 1줄) -->
+					<ul class="wa_thumbnail_vert_list">
+						{{#each gallery03.getJsonData}}
+							{{#isRange @index 0 2}}
+								<li>
+									<a href="http://m.water.or.kr/life/gallery/gallery03_detail.do?ntt_id={{ntt_id}}" class="_btn_move_sub">
+										<div class="list_img">
+											<img src="//www.water.or.kr/{{ref_url_thumbnail}}" alt="">
+										</div>
+										<ul class="gallery_txt">
+											<li class="title" style="font-weight: bold;">{{ntt_sj}}</li>
+											<!--<li class="title">제목 : {{ntt_sj}}</li>-->
+											<!--<li class="name">등록자 : {{ntcr_nm}}</li>-->
+											<!--<li class="conference">{{ntt_cn}}</li>-->
+										</ul>
+									</a>
+								</li>
+							{{/isRange}}
+						{{/each}}
+					</ul> <!-- //세로형 이미지 리스트 (텍스트 영역 1줄) -->
+				</li>
+				<li>
+					<h3 class="gallery_title">시설</h3>
+					<!-- 세로형 이미지 리스트 (텍스트 영역 1줄) -->
+					<ul class="wa_thumbnail_vert_list">
+						{{#each gallery04.getJsonData}}
+							{{#isRange @index 0 2}}
+								<li>
+									<a href="http://m.water.or.kr/life/gallery/gallery04_detail.do?ntt_id={{ntt_id}}" class="_btn_move_sub">
+										<div class="list_img">
+											<img src="//www.water.or.kr/{{ref_url_thumbnail}}" alt="">
+										</div>
+										<ul class="gallery_txt">
+											<li class="title" style="font-weight: bold;">{{ntt_sj}}</li>
+											<!--<li class="title">제목 : {{ntt_sj}}</li>-->
+											<!--<li class="name">등록자 : {{ntcr_nm}}</li>-->
+											<!--<li class="conference">{{ntt_cn}}</li>-->
+										</ul>
+									</a>
+								</li>
+							{{/isRange}}
+						{{/each}}
+					</ul> <!-- //세로형 이미지 리스트 (텍스트 영역 1줄) -->
+				</li>
+			</ul> <!-- //갤러리 리스트 -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+<div class="area_contents">
+	<div id="pannel_calender">
+	</div>
+</div>
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">기술 SW 커뮤니티 <span class="row2">물과 관련한 다양한 전문 지식을 <br> 함께 나눠요</span></h2>
+		<a href="http://m.water.or.kr/application/community/community01.do" class="btn _btn_move_sub">더보기<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<div class="grid_inner">
+			<!-- 가로형 텍스트 리스트 -->
+			<ul class="wa_text_list">
+				{{#each swCommunity.list}}
+					{{#isRange @index 0 5}}
+						<li>
+							<a href="http://m.water.or.kr/application/community/{{swCommunityUrl comt_ID}}?COMT_BBS_ID={{comt_BBS_ID}}" class="_btn_move_sub">
+								<!--<p class="list_title"><span style="color: #0569b4;">[{{chk}}]</span> {{comt_BBS_SJ}}</p>-->
+								<p class="list_title">{{comt_BBS_SJ}}</p>
+								<ul class="list_txt">
+									<li class="by">{{regist_NM}}</li>
+									<li class="date">{{regist_DATE}}</li>
+								</ul>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!-- //가로형 텍스트 리스트 -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+    

@@ -1,0 +1,210 @@
+
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">뉴스</h2>
+		<a href="/information/socialNews/socialNews01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<!-- 상단 가로형 텍스트, 하단 세로형 이미지 리스트 -->
+		<div class="grid_inner thumb_plus_txt_list">
+			<!-- 가로형 텍스트 리스트 -->
+			<ul class="wa_text_list">
+				{{#each news.getJsonData}}
+					{{#isRange @index 2 6}}
+						<li>
+							<a href="{{contsUrl}}" class="_btn_move_sub" target="_blank">
+								<p class="list_title">{{contsTitle}}</p>
+								<ul class="list_txt">
+									<li class="date">{{regDate}}</li>
+									<li class="by">{{contsCompany}}</li>
+								</ul>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul>
+			<!-- 세로형 이미지 리스트 (텍스트 영역 1줄)-->
+			<ul class="wa_thumbnail_vert_list">
+				<li>
+					<a href="{{news.getJsonData.0.contsUrl}}"  class="_btn_move_sub"target="_blank">
+						<div class="list_img">
+							<img src="//www.water.or.kr{{news.getJsonData.0.imgUrl}}" alt="">
+						</div>
+						<p class="list_title">{{news.getJsonData.0.contsTitle}}</p>
+						<ul class="list_txt">
+							<li class="date">{{news.getJsonData.0.regDate}}</li>
+							<li class="by">{{news.getJsonData.0.contsCompany}}</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="{{news.getJsonData.1.contsUrl}}" target="_blank">
+						<div class="list_img">
+							<img src="//www.water.or.kr{{news.getJsonData.1.imgUrl}}" alt="">
+						</div>
+						<p class="list_title">{{news.getJsonData.1.contsTitle}}</p>
+						<ul class="list_txt">
+							<li class="date">{{news.getJsonData.1.regDate}}</li>
+							<li class="by">{{news.getJsonData.1.contsCompany}}</li>
+						</ul>
+					</a>
+				</li>
+				<!--<li>-->
+					<!--<a href="http://www.yonhapnews.co.kr/bulletin/2016/07/09/0200000000AKR20160709024500004.HTML?input=1195m" class="_btn_move_sub" target="_blank">-->
+						<!--<div class="list_img">-->
+							<!--<img src="http://img.yonhapnews.co.kr/photo/yna/YH/2015/08/01//PYH2015080103430005400_P2.jpg" alt="">-->
+						<!--</div>-->
+						<!--<p class="list_title"><내일날씨> 푹푹 찌는 여름…태풍은 북상 중</p>-->
+					<!--</a>-->
+				<!--</li>-->
+			</ul> <!-- //세로형 이미지 리스트 (텍스트 영역 1줄)-->
+		</div> <!-- //상단 가로형 텍스트, 하단 세로형 이미지 리스트 -->
+	</div>
+</div>
+<!-- //area_contents -->
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">이슈리포트</h2>
+		<a href="/information/issuereport/issuereport01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents">
+
+        <!-- 상단 세로형, 하단 가로형 이미지 리스트 -->
+        <div class="grid_inner thumb_plus_horz_list">
+            <!-- 세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+            <ul class="wa_thumbnail_vert_list none_padding_top">
+				<!--어드민 데이터-->
+				<ul class="wa_thumbnail_vert_list none_padding_top">
+
+					<li>
+						<a href="#" class="_openDialog" data-href="//www.water.or.kr/information/issuereport/download.do?filename=%2F{{report.getJsonData.0.refUrlAbb}}&cnt_type=IAA&bbs_id=BBSMSTR_000000000091&ntt_id={{report.getJsonData.0.nttId}}">
+						<!--<a href="//www.water.or.kr/information/issuereport/download.do?filename=%2F{{report.getJsonData.0.refUrlAbb}}&cnt_type=IAA&bbs_id=BBSMSTR_000000000091&ntt_id={{report.getJsonData.0.nttId}}">-->
+							<div class="list_img">
+								<img src="//www.water.or.kr/{{report.getJsonData.0.refUrlThumbnail}}" alt="">
+							</div>
+							<p class="list_title" style="-webkit-line-clamp: 3;font-weight: normal;">{{report.getJsonData.0.nttSj}}</p>
+							<!--<p class="list_txt">{{report.getJsonData.0.nttCn}}</p>-->
+						</a>
+					</li>
+					<li>
+						<a href="#" class="_openDialog" data-href="//www.water.or.kr/information/issuereport/download.do?filename=%2F{{report.getJsonData.1.refUrlAbb}}&cnt_type=IAA&bbs_id=BBSMSTR_000000000091&ntt_id={{report.getJsonData.1.nttId}}">
+							<div class="list_img">
+								<img src="//www.water.or.kr/{{report.getJsonData.1.refUrlThumbnail}}" alt="">
+							</div>
+							<p class="list_title" style="-webkit-line-clamp: 3;font-weight: normal;">{{report.getJsonData.1.nttSj}}</p>
+							<!--<p class="list_txt">{{report.getJsonData.1.nttCn}}</p>-->
+						</a>
+					</li>
+				</ul>
+            </ul>
+			<!-- //세로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+            <!-- 가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+            <ul class="wa_thumbnail_horz_list">
+                {{#each report.getJsonData}}
+					<!--어드민데이터-->
+					{{#isRange @index 2 5}}
+						<li>
+							<a href="#" class="_openDialog" data-href="//www.water.or.kr/information/issuereport/download.do?filename=%2F{{refUrlAbb}}&cnt_type=IAA&bbs_id=BBSMSTR_000000000091&ntt_id={{nttId}}">
+								<div class="list_img">
+									<img src="//www.water.or.kr{{refUrlThumbnail}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title" style="-webkit-line-clamp: 3;white-space: normal;">{{nttSj}}</p>
+									<!--<p class="list_txt">{{nttCn}}</p>-->
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+
+                {{/each}}
+            </ul> <!-- //가로형 이미지 리스트 ( 텍스트 영역 2줄 ) -->
+        </div> <!-- //상단 세로형, 하단 가로형 이미지 리스트 -->
+	</div>
+</div>
+<!-- //area_contents -->
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">물기술 동향</h2>
+		<a href="/information/techtrends/techtrends01.do" class="btn _btn_move_sub">더보기<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<div class="grid_inner">
+			<!-- 가로형 텍스트 리스트 -->
+			<ul class="wa_text_list">
+				{{#each article.getJsonData}}
+					<!--어드민 데이터-->
+					{{#isLt @index 8}}
+						<li>
+							<a href="http://m.water.or.kr/information/techtrends/techtrends01_detail.do?IDXNO_OLD={{idxno}}" class="_btn_move_sub">
+								<p class="list_title">{{title}}</p>
+								<ul class="list_txt">
+									<li class="date">{{regDate}}</li>
+									<li class="by">{{userName}}</li>
+								</ul>
+							</a>
+						</li>
+					{{/isLt}}
+				{{/each}}
+				<!--{{#each article.list}}
+					<!--서브데이터-->
+					{{#isLt @index 8}}
+						<li>
+							<a href="http://m.water.or.kr/information/techtrends/techtrends01_detail.do?IDXNO_OLD={{IDXNO_OLD}}" class="_btn_move_sub">
+								<p class="list_title">{{TITLE}}</p>
+								<ul class="list_txt">
+									<li class="REG_DATE">{{REG_DATE}}</li>
+									<li class="by">{{USER_NAME}}</li>
+								</ul>
+							</a>
+						</li>
+					{{/isLt}}
+				{{/each}}-->
+			</ul> <!-- //가로형 텍스트 리스트 -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">그림으로 보는 물통계</h2>
+		<a href="http://m.water.or.kr/wstatic/picture/pictureAll.do" class="btn _btn_move_sub">더보기<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<div class="grid_inner">
+			<!-- 상단만 큰 이미지 하단 가로형 텍스트(1줄) 리스트 -->
+			<ul class="wa_hot_issue_list">
+
+				<!--서버데이터-->
+				{{#each easyStatic.list}}
+					{{#isEq @index 0}}
+						<li>
+								<a href="http://m.water.or.kr{{hrefPicture statsTypeCd statsSeqno}}" class="_btn_move_sub">
+								<div class="big_img">
+									<img src="http://www.water.or.kr{{removehttp thumUrl}}" alt="">
+								</div>
+								<p class="list_title">{{title}}</p>
+							</a>
+						</li>
+					{{/isEq}}
+					{{#isGt @index 0}}
+						{{#isLt @index 5}}
+							<li>
+								<a href="http://m.water.or.kr{{hrefPicture statsTypeCd statsSeqno}}" class="_btn_move_sub">
+									<p class="list_title">{{title}}</p>
+								</a>
+							</li>
+						{{/isLt}}
+					{{/isGt}}
+				{{/each}}
+
+
+			</ul> <!-- //상단만 큰 이미지 하단 가로형 텍스트(1줄) 리스트 -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+    

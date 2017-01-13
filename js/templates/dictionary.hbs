@@ -1,0 +1,37 @@
+<div class="box_header search_header">
+	<h2 class="contents_title">물 백과사전</h2>
+	<span class="search_count">전체 <em>{{dataFormat dictionary.totCnt '0,0'}}</em>건</span>
+	<form method="get" id="form1" name="form1">
+		<input type="hidden" name="pageIndex" id="pageIndex" value="1">
+		<input type="hidden" name="lastPageNo" id="lastPageNo" value="">
+		<input type="hidden" id="search_Hangulindex" name="search_Hangulindex" value="">
+		<input type="hidden" id="search_Engindex" name="search_Engindex" value="">
+		<input type="hidden" id="TERM_SEQNO" name="TERM_SEQNO" value="0">
+		<input type="hidden" id="HANGULTERM" name="HANGULTERM" value="">
+		<input type="hidden" id="COMM_CODE" name="COMM_CODE" value="">
+		<input type="hidden" id="ENGTERM" name="ENGTERM" value="">
+		<input type="hidden" id="ATTFILE_SEQNO" name="ATTFILE_SEQNO" value="0">
+		<input type="hidden" id="languege" name="languege" value="h">
+		<input type="hidden" id="searchTextBefor" name="searchTextBefor" value="">
+		<div class="search_form_wrap">
+			<span><input type="text" title="검색어를 입력하세요." placeholder="검색어를 입력하세요." id="searchWord" name="searchText" value=""></span>
+			<button class="btn_blue btn_search _btn_move_sub" onclick="fnSearch('/knowledge/encyclopedia/encyclopedia01.do');">검색<span class="sprite sprite_common icon_search_white"></span></button>
+		</div>
+	</form>
+	<p class="popular_search_title">인기검색 TOP 5</p>
+</div>
+<div class="box_contents none_top_bottom_padding">
+	<!--  물 백과사전 검색 리스트 -->
+	<ul class="popular_search_list">
+		{{#each dictionary.getJsonData}}
+			{{#isRange @index 0 5}}
+				<li>
+					<a href="/{{loc}}" class="_btn_move_sub">
+						<p class="list_title">{{title}}</p>
+					</a>
+				</li>
+			{{/isRange}}
+		{{/each}}
+
+	</ul> <!-- //물 백과사전 검색 리스트 -->
+</div>

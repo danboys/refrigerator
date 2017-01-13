@@ -1,0 +1,38 @@
+<div class="dim_block">
+	<div class="wrap_popup popup_info">
+		<div class="popup_inner">
+			<div class="popup_header">
+				<h1 class="popup_title">날씨이야기</h1>
+				<button type="button" class="btn_popup_close _popup_close"><span class="sprite sprite_common icon_reveal_close">닫기</span></button>
+			</div>
+			<div class="popup_contents">
+				<div class="box_inner">
+					<div class="grid_inner">
+						<!-- 기로형 이미지 리스트 ( 텍스트 영역 3줄 ) -->
+						<ul class="wa_thumbnail_horz_list col3">
+							{{#each weatherStory.getJsonData}}
+								{{#isRange @index 0 5}}
+
+									<li>
+										<a href="http://m.water.or.kr/life/weatherstory/weatherstory01_detail.do?weatherstoryNum={{turseq}}" class="_btn_move_sub">
+											<div class="list_img">
+												<img src="//www.water.or.kr/images/egovframework/life/weast/{{thumbnailNm}}" alt="">
+											</div>
+											<div class="list_info">
+												<p class="list_title">{{blogTitle}}</p>
+												<p class="list_txt">{{blogContent}}</p>
+												<p class="by">출처 : {{sourceTitle}}</p>
+											</div>
+										</a>
+									</li>
+
+								{{/isRange}}
+							{{/each}}
+						</ul> <!-- //기로형 이미지 리스트 ( 텍스트 영역 3줄 ) -->
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

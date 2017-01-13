@@ -1,0 +1,36 @@
+<div class="system_img">
+	<img src="../../images/page/img_dam_water_system_02.png" alt="">
+</div>
+<div class="table table_border table_center">
+	<table>
+		<caption></caption>
+		<colgroup></colgroup>
+		<thead>
+		<tr>
+			<th scope="col" rowspan="2">주요지점</th>
+			<th scope="col" colspan="3">수위(m)</th>
+			<!--<th scope="col" rowspan="2">유량<br>(㎥/초)</th>-->
+			<th scope="col" rowspan="2">예경보<br>현황</th>
+			<th scope="col" rowspan="2">발령<br>일시</th>
+		</tr>
+		<tr>
+			<th scope="col">현재</th>
+			<th scope="col">주의보</th>
+			<th scope="col">경보</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each flood.list}}
+			<tr>
+				<td>{{damnm}}</td>
+				<td>{{wl}}</td>
+				<td>{{wrnwl}}</td>
+				<td>{{almwl}}</td>
+				<!--<td>{{fw}}</td>-->
+				<td>{{kind}}</td>
+				<td>{{ancdt}}</td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+</div>

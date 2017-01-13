@@ -1,0 +1,183 @@
+
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">물교육</h2>
+		<a href="http://m.water.or.kr/knowledge/educate/educate.contents" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents">
+		<div class="grid_inner">
+			<!--  가로형 이미지 리스트 -->
+			<ul class="wa_thumbnail_horz_list">
+				{{#each education.getJsonData}}
+					{{#isRange @index 0 5}}
+						<li>
+							<a href="http://m.water.or.kr{{mobilelink}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/{{imgUrl}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{title}}</p>
+									<p class="list_txt">{{someHead}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+
+			</ul> <!--  //가로형 이미지 리스트 -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+
+
+<!-- area_contents -->
+<div class="area_contents pannel_knowledge">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">지식동영상</h2>
+		<a href="http://m.water.or.kr/knowledge/academy/academy01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<div class="grid_inner">
+			<!--  세로형 이미지 리스트 (비디오 아이콘은 클래스 video_list 추가) -->
+			<ul class="wa_thumbnail_vert_list video_list none_padding_top clearfix">
+				{{#each wacademy.getJsonData }}
+					{{#isRange @index 0 4}}
+						<li>
+							<a href="http://m.water.or.kr/knowledge/academy/academy01_detail.do?ACADEMY_SEQNO={{academy_SEQNO}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/upload/wacademy/images/{{main_IMAGE_NAME}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{subject}}</p>
+									<p class="list_txt">{{removeHtml maincontent}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!--  //세로형 이미지 리스트 (비디오 아이콘은 클래스 video_list 추가) -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">물과역사</h2>
+		<a href="http://m.water.or.kr/knowledge/history/history01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents">
+		<div class="grid_inner">
+			<!-- 가로형 이미지 리스트 -->
+			<ul class="wa_thumbnail_horz_list">
+				{{#each history.getJsonData }}
+					{{#isRange @index 0 5}}
+						<li>
+							<a href="http://m.water.or.kr/knowledge/history/history01_detail.do?CONTS_ID={{contsId}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/{{imgUrl}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{title}}</p>
+									<p class="list_txt">{{someHead}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+				<!--{{#each history.getJsonData}}
+					{{#isRange @index 0 5}}
+						<li>
+							<a href="/knowledge/history/history01_detail.do?CONTS_ID={{conts_ID}}" class="_btn_move_sub">
+								<div class="list_img">
+									<img src="//www.water.or.kr/upload/contents/{{main_IMAGE_NM}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{conts_SJ}}</p>
+									<p class="list_txt">{{conts_SUMMARY}}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}-->
+			</ul> <!-- //가로형 이미지 리스트 -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">학생물발명품</h2>
+		<a href="http://m.water.or.kr/knowledge/stuInvention/stuInvention01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents">
+		<div class="grid_inner">
+			<!--  가로형 이미지 리스트 -->
+			<ul class="wa_thumbnail_horz_list">
+				{{#each student.list}}
+					{{#isRange @index 0 5}}
+						<li>
+							<a href="http://m.water.or.kr/knowledge/stuInvention/stuInvention01_detail.do?INVENTION_SEQNO={{invention_SEQNO}}"  class="_btn_move_sub">
+								<div class="list_img">
+									<img src="{{removehttp thumb_FILE_URL}}" alt="">
+								</div>
+								<div class="list_info">
+									<p class="list_title">{{title}}</p>
+									<p>[{{contest}}]</p>
+									<p class="list_txt ellipsis01"> {{keyword }}</p>
+								</div>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!-- //가로형 이미지 리스트 -->
+		</div>
+	</div>
+</div>
+<!-- //area_contents -->
+<!-- area_contents -->
+<div class="area_contents" id="dictionary">
+</div>
+<!-- //area_contents -->
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">우수기술제품</h2>
+	</div>
+	<div class="box_contents none_top_bottom_padding">
+		<div class="grid_inner">
+			<!--  세로형 이미지 리스트 -->
+			<ul class="wa_thumbnail_vert_list none_padding_top _btn_new_skill newSkill">
+				{{#each newskill }}
+					{{#isGt @index 3}}
+						<li data-link="{{linkdetail}}" style="display:none">
+							<a href="#">
+								<div class="list_img">
+									<img src="//www.water.or.kr/{{imgUrl}}" alt="">
+								</div>
+								<p class="list_title">{{title}}</p>
+								<p class="list_txt">{{someHead}}</p>
+							</a>
+						</li>
+					{{else}}
+						<li data-link="{{linkdetail}}">
+							<a href="#">
+								<div class="list_img">
+									<img src="//www.water.or.kr/{{imgUrl}}" alt="">
+								</div>
+								<p class="list_title">{{title}}</p>
+								<p class="list_txt">{{someHead}}</p>
+							</a>
+						</li>
+					{{/isGt}}
+				{{/each}}
+			</ul> <!-- //세로형 이미지 리스트 -->
+		</div>
+
+	</div>
+    <a href="#" class="btn btn_wide_large _btn_newskill_more">더보기</a>
+</div>
+<!-- //area_contents -->

@@ -26,30 +26,22 @@
 	<script type="text/javascript" src="../../js/ui/ui.common.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.util.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.init.js"></script>
-	<script type="text/javascript" src="../../js/templates/sample.js"></script>
+
+	<script type="text/javascript" src="../../js/templates/templates.js"></script>
+	<script type="text/javascript" src="precompile.js"></script>
+
 </head>
 <body>
 <div id='personContainer'></div>
-<hr>
-<div id='GroupContainer'></div>
+<script type="text/javascript">
+	var mGroup = Backbone.Model.extend({
 
+	});
 
-<script id="PersonTemplate" type="text/x-handlebars-template">
-
-</script>
-
-<script id="GroupTemplate" type="text/x-handlebars-template">
-	<div>
-		{{name}} // {{age}}
-	</div>
-</script>
-
-
-<script>
-	var viewGroup = Backbone.View.extend({
+	var vGroup = Backbone.View.extend({
 		el: $('#personContainer'),
 		render: function () {
-			var template = refri['sample'];
+			var template = refri['sample2'];
 			var html = template({
 				name: "Tim",
 				age: 5
@@ -59,11 +51,10 @@
 		initialize: function () {
 		}
 	});
-	var GroupView = new viewGroup();
+	var GroupView = new vGroup();
 	$(document).ready(function () {
 		GroupView.render();
 	});
 </script>
-
 </body>
 </html>

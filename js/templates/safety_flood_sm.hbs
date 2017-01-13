@@ -1,0 +1,32 @@
+<div class="system_img">
+	<img src="../../images/page/img_dam_water_system_01.png" alt="">
+</div>
+<div class="table table_border table_center">
+	<table>
+		<caption></caption>
+		<colgroup>
+			<col style="width:30%;">
+			<col style="width:20%;">
+			<col style="width:20%;">
+			<col style="width:20%;">
+		</colgroup>
+		<thead>
+		<tr>
+			<th scope="col">시설물</th>
+			<th scope="col">현재수위<br>(EL.m)</th>
+			<th scope="col">계획홍수위<br>(EL.m)</th>
+			<th scope="col">상시만수위<br>(EL.m)</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each floodSM.floodDamList}}
+			<tr>
+				<td class="A{{estcd}} location"></td>
+				<td>{{rwl}}</td>
+				<td>{{plfwl}}</td>
+				<td>{{odflwl}}</td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+</div>

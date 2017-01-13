@@ -1,0 +1,39 @@
+<!-- area_contents -->
+	<div class="box_header">
+		<h2 class="contents_title">물 행사/일정 <span class="row2">물과 관련된 행사/세미나를 확인하고<br> 등록할 수 있습니다.</span></h2>
+		<a href="/information/event/event01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<div class="box_contents">
+		<h3 class="sub_title">오늘의 행사/일정 ({{nowDate}})</h3>
+		<div class="table last_align_center">
+			{{#if calendar.today}}
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col style="width:50%">
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">행사기간</th>
+					<th scope="col">행사명</th>
+				</tr>
+				</thead>
+				<tbody>
+				{{#each calendar.today}}
+					<tr>
+						<td>{{start}}~<br>
+							{{end}}</td>
+						<td class="subject">{{title}}</td>
+					</tr>
+				{{/each}}
+				</tbody>
+			</table>
+			{{else}}
+				<p style="text-align: center;padding: 50px 0;font-size: 14px;">오늘의 행사/일정이 없습니다.</p>
+			{{/if}}
+		</div>
+		<div class="event_calendar">
+            <div id="calender_c"></div>
+		</div>
+	</div>
+<!-- //area_contents -->

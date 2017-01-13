@@ -1,0 +1,87 @@
+<div class="dim_block">
+	<div class="wrap_popup popup_info">
+		<div class="popup_inner">
+			<div class="popup_header">
+				<h1 class="popup_title">나의 수돗물</h1>
+				<button type="button" class="btn_popup_close _popup_close"><span class="sprite sprite_common icon_reveal_close">닫기</span></button>
+			</div>
+			<div class="popup_contents">
+				<div class="box_inner">
+					<div class="water_info_wrap">
+						<!--<div class="water_info_graph">-->
+							<!--<div class="graph green_graph">-->
+								<!--<div>-->
+									<!--<ul>-->
+										<!--<li><span style="height:61%"><em>610</em></span><strong>평균</strong></li>-->
+										<!--<li><span style="height:100%"><em>100.0</em></span><strong class="triple">최대<br>(서울 등)</strong></li>-->
+										<!--<li><span style="height:100%" class="bar_color"><em>100.0</em></span><strong class="double">우리동네</strong></li>-->
+										<!--<li><span style="height:52%"><em>520</em></span><strong class="double">최저<br>(태안)</strong></li>-->
+									<!--</ul>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+						<div class="water_info_table" style="width: 100%;">
+							<div class="table last_align_right">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="width: 50%;">
+										<col style="width: 50%;">
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">급수인구(명)</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr class="highlight">
+										<th scope="row">{{myWater.popupListMy.cityName}}</th>
+										<td>{{myWater.popupListMy.totCount}}</td>
+									</tr>
+									<tr>
+										<th scope="row">최대<br>(지자체명)</th>
+										<td>{{myWater.popupListSUM.0.strValue}}<br>( {{myWater.popupListSUM.0.cityName}} )</td>
+									</tr>
+									<tr>
+										<th scope="row">최소<br>(지자체명)</th>
+										<td>{{myWater.popupListSUM.6.strValue}}<br>( {{myWater.popupListSUM.6.cityName}} )</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+
+
+
+						</div>
+						<div class="water_info_table2">
+							<div class="table last_align_right">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="width: 50%;">
+										<col style="width: 50%;">
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">급수인구(명)</th>
+									</tr>
+									</thead>
+									<tbody>
+									{{#each myWater.popupList}}
+									<tr>
+										<th scope="row">{{cityName}}</th>
+										<td>{{totCount}}</td>
+									</tr>
+									{{/each}}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

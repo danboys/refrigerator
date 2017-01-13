@@ -1,0 +1,247 @@
+
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">글로벌트렌드 &amp; 프로젝트</h2>
+		<a href="http://m.water.or.kr/overseas/globals/globals01.do" class="btn">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<!-- box contents -->
+	<div class="box_contents">
+		<div class="horz_plus_text_list">
+			<ul class="wa_thumbnail_horz_list">
+				<li>
+					<a href="http://m.water.or.kr/overseas/globals/globals01_detail.do?globaltrendSeqno={{trend.list.0.globaltrendSeqno }}" class="ui-link _btn_move_sub">
+						<div class="list_img">
+							<img src="{{removehttp trend.list.0.thumUrl}}" alt="">
+						</div>
+						<div class="list_info">
+							<p class="list_title">{{trend.list.0.title}}</p>
+							<ul class="list_txt">
+								<li>등록일자 : {{trend.list.0.rgsdt}} </li>
+								<li class="ellipsis01">기관 : {{trend.list.0.organ}}</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="http://m.water.or.kr/overseas/globals/globals01_detail.do?globaltrendSeqno={{trend.list.1.globaltrendSeqno }}" class="ui-link  _btn_move_sub">
+						<div class="list_img">
+							<img src="{{removehttp trend.list.1.thumUrl}}" alt="">
+						</div>
+						<div class="list_info">
+							<p class="list_title">{{trend.list.1.title}}</p>
+							<ul class="list_txt">
+								<li>등록일자 : {{trend.list.1.rgsdt}} </li>
+								<li class="ellipsis01">기관 :{{trend.list.1.organ}}</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- 가로형 텍스트 리스트 -->
+			<ul class="wa_text_list">
+				{{#each trend.list}}
+					{{#isRange @index 2 4}}
+						<li>
+							<a href="http://m.water.or.kr/overseas/globals/globals01_detail.do?globaltrendSeqno={{globaltrendSeqno}}" class="_btn_move_sub">
+								<p class="list_title">{{title}}</p>
+								<ul class="list_txt">
+									<li class="date">{{rgsdt}}</li>
+									<li class="by">{{organ}}</li>
+								</ul>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+
+			</ul> <!-- //가로형 텍스트 리스트 -->
+		</div>
+	</div> <!-- //box contents -->
+</div>
+<!-- //area_contents -->
+
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">포럼&amp;컨퍼런스</h2>
+		<a href="http://m.water.or.kr/overseas/forum/forum01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<!-- box contents -->
+	<div class="box_contents">
+		<div class="horz_plus_text_list">
+			<ul class="wa_thumbnail_vert_list none_padding_top">
+				<li>
+					<a href="http://m.water.or.kr/overseas/forum/forum01.do" class="ui-link _btn_move_sub">
+						<div class="list_img">
+							<img src="{{removehttp forum.list.0.thumUrl}}" alt="">
+						</div>
+						<div class="list_info">
+							<p class="list_title">{{forum.list.0.title }}</p>
+							<ul class="list_txt">
+								<li class="ellipsis01">{{forum.list.0.rgsdt}} | {{forum.list.0.type}}</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="http://m.water.or.kr/overseas/forum/forum01.do" class="ui-link _btn_move_sub">
+						<div class="list_img">
+							<img src="{{removehttp forum.list.1.thumUrl }}" alt="">
+						</div>
+						<div class="list_info">
+							<p class="list_title">{{forum.list.1.title }}</p>
+							<ul class="list_txt">
+								<li class="ellipsis01">{{forum.list.1.rgsdt}} | {{forum.list.1.type}}</li>
+							</ul>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- 가로형 텍스트 리스트 -->
+			<ul class="wa_text_list">
+				{{#each forum.list }}
+					{{#isRange @index 2 4}}
+						<li>
+							<a href="http://m.water.or.kr/overseas/forum/forum01.do" class="_btn_move_sub">
+								<p class="list_title">{{title }}</p>
+								<ul class="list_txt">
+									<li class="date">{{rgsdt}}</li>
+									<li class="by">{{type}}</li>
+								</ul>
+							</a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul> <!-- //가로형 텍스트 리스트 -->
+		</div>
+	</div> <!-- //box contents -->
+</div>
+<!-- //area_contents -->
+
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">국가분석정보</h2>
+		<em>(전체 49국가)</em><a href="http://m.water.or.kr/overseas/nation/nation01.do" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<!-- box contents -->
+	<div class="box_contents">
+		<div class="national_analyze">
+			<ul class="clearfix">
+				{{#each flag.list }}
+					{{#isRange @index 0 8}}
+						<li class="col-xs-3">
+							<a href="http://m.water.or.kr/overseas/nation/nation01_detail.do?ANALYSIS_SEQNO={{analysis_SEQNO}}" class="_btn_move_sub"><span class="national_flag"><img src="{{flag_FILE_URL}}" alt=""></span>
+								<span class="flag_name">{{nation_KOR}}</span></a>
+						</li>
+					{{/isRange}}
+				{{/each}}
+			</ul>
+		</div>
+	</div> <!-- //box contents -->
+</div>
+<!-- //area_contents -->
+
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header none_border_bottom">
+		<h2 class="contents_title">글로벌분석DB</h2>
+		<a href="http://m.water.or.kr/overseas/global/global01.contents" class="btn _btn_move_sub">더보기 <span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<!-- box contents -->
+	<div class="box_contents none_top_padding global_analyze">
+		<div class="table table_border table_first_center_td">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col style="width:15%;">
+					<col style="width:25%;">
+					<col style="width:60%;">
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">분류</th>
+					<th scope="col">자료원</th>
+					<th scope="col">제공자료</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th rowspan="4">지형</th>
+					<td><a href="http://m.water.or.kr/overseas/global/global02.contents?select_4depth=01" class="_btn_move_sub">WaterBase</a></td>
+					<td>세계 지형 및 기상 자료</td>
+				</tr>
+				<tr>
+					<td><a href="http://m.water.or.kr/overseas/global/global02.contents?select_4depth=02" class="_btn_move_sub">DIVA-GIS</a></td>
+					<td>GIS(국가,기상,농업,생태계 등)</td>
+				</tr>
+				<tr>
+					<td><a href="http://m.water.or.kr/overseas/global/global02.contents?select_4depth=03" class="_btn_move_sub">USGS</a></td>
+					<td>세계 수치표고모형(DEM)</td>
+				</tr>
+				<tr>
+					<td><a href="http://m.water.or.kr/overseas/global/global02.contents?select_4depth=04" class="_btn_move_sub">GDEM</a></td>
+					<td>세계 ASTER DEM 데이터</td>
+				</tr>
+				<tr>
+					<th>수문</th>
+					<td><a href="http://m.water.or.kr/overseas/global/global03.contents?select_4depth=01" class="_btn_move_sub">GRDC</a></td>
+					<td>158개국 관측소 유출량 자료</td>
+				</tr>
+				<tr>
+					<th rowspan="2">기상</th>
+					<td><a href="http://m.water.or.kr/overseas/global/global04.contents?select_4depth=01" class="_btn_move_sub">NOAA</a></td>
+					<td>세계 기상 관측 자료</td>
+				</tr>
+				<tr>
+					<td><a href="http://m.water.or.kr/overseas/global/global04.contents?select_4depth=02" class="_btn_move_sub">GWD</a></td>
+					<td>SWAT 유출모형 세계 기상자료</td>
+				</tr>
+				<tr>
+					<th rowspan="2">시설물</th>
+					<td><a href="http://m.water.or.kr/overseas/global/global05.contents?select_4depth=01" class="_btn_move_sub">SEDAC</a></td>
+					<td>주요 저수지 및 댐 제원</td>
+				</tr>
+				<tr>
+					<td><a href="http://m.water.or.kr/overseas/global/global05.contents?select_4depth=02" class="_btn_move_sub">ICOLD</a></td>
+					<td>세계 주요 댐 제원 현황 제공</td>
+				</tr>
+				<tr>
+					<th rowspan="3">물재해</th>
+					<td><a href="http://m.water.or.kr/overseas/global/global06.contents?select_4depth=01" class="_btn_move_sub">WRI Aqueduct</a></td>
+					<td>세계 홍수위험도, 예상피해</td>
+				</tr>
+				<tr>
+					<td><a href="http://m.water.or.kr/overseas/global/global06.contents?select_4depth=02" class="_btn_move_sub">CSIC</a></td>
+					<td>세계 SPEI 가뭄지수 제공</td>
+				</tr>
+				<tr>
+					<td><a href="http://m.water.or.kr/overseas/global/global06.contents?select_4depth=03" class="_btn_move_sub">EM-DAT</a></td>
+					<td>세계 재해정보 제공</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div> <!-- //box contents -->
+</div>
+<!-- //area_contents -->
+
+<!-- area_contents -->
+<div class="area_contents">
+	<div class="box_header">
+		<h2 class="contents_title">K-water 해외사업</h2>
+		<a href="http://m.water.or.kr/overseas/nation/nation02.do" class="btn _btn_move_sub">더보기<span class="sprite sprite_common right_sprite icon_more"></span></a>
+	</div>
+	<!-- box contents -->
+	<div class="box_contents none_top_padding">
+		<div class="business_kwater">
+			<p>진행중 18건(투자 3건, PM 4건, ODA 11건), 완료 55건</p>
+			<div class="business_img">
+                <a href="http://m.water.or.kr/overseas/nation/nation02.do" class="_btn_move_sub"><img src="../../images/page/img_kwater_business.jpg" alt=""></a>
+			</div>
+		</div>
+	</div> <!-- //box contents -->
+</div>
+<!-- //area_contents -->
+
+    
