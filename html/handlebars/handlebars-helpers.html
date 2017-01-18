@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>1</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<!--<meta name="viewport" content="width=960">-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-title" content="냉장고를 부탁해"/>
+	<meta property="og:title" content="냉장고를 부탁해">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="냉장고를 부탁해">
+	<meta name="twitter:url" content="">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:description" content="">
+	<link rel="stylesheet" type="text/css" href="../../css/ui/ui.style.css"/>
+	<script type="text/javascript" src="../../js/jquery/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery/handlebars.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery/underscore.js"></script>
+	<script type="text/javascript" src="../../js/jquery/backbone.js"></script>
+	<script type="text/javascript" src="../../js/helper/helperLib.js"></script>
+	<script type="text/javascript" src="../../js/helper/ui.helper.js"></script>
+	<script type="text/javascript" src="../../js/ui/ui.common.js"></script>
+	<script type="text/javascript" src="../../js/ui/ui.util.js"></script>
+	<script type="text/javascript" src="../../js/ui/ui.init.js"></script>
+</head>
+<body>
+
+
+
+<div id='personContainer'>
+
+
+</div>
+
+<script id="entry-template" type="text/x-handlebars-template">
+	<div class="entry">
+		<h1>{{title}}</h1>
+		<div class="body">
+			{{dashcase body}}
+		</div>
+	</div>
+</script>
+
+<script type="text/javascript">
+	var source   = $("#entry-template").html();
+	var template = Handlebars.compile(source);
+	var context = {title: "My New Post", body: "This is my first post!"};
+	var html    = template(context);
+
+	$('#personContainer').html(html);
+</script>
+
+</body>
+</html>
