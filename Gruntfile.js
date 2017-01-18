@@ -26,11 +26,22 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
+    },
+    uglify: {
+      my_target: {
+        options: {
+          mangle : false
+        },
+        files: {
+          'js/helper/helpers.min.js': 'js/helper/helpers.js'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s).
   grunt.registerTask('default', ['handlebars']);

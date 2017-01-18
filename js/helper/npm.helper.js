@@ -1,1 +1,3 @@
-var helpers = require('handlebars-helpers');
+var helpers = require('handlebars-helpers')({
+    handlebars: Handlebars
+});

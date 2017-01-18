@@ -3881,7 +3881,9 @@ module.exports = {
 };
 
 },{}],14:[function(require,module,exports){
-var helpers = require('handlebars-helpers');
+var helpers = require('handlebars-helpers')({
+    handlebars: Handlebars
+});
 
 },{"handlebars-helpers":67}],15:[function(require,module,exports){
 (function (process,__filename){
@@ -50005,7 +50007,8 @@ module.exports = function (str) {
     const WHITESPACE         = /\s/;
     const ALLOWED_TAGS_REGEX = /<(\w*)>/g;
 
-    function striptags(html = '', allowableTags = [], tagReplacement = '') {
+    var html = '', allowableTags = [], tagReplacement = '';
+    function striptags(html, allowableTags, tagReplacement) {
         var state = STATE_OUTPUT,
             depth = 0,
             output = '',

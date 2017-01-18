@@ -4,7 +4,7 @@
   "description": "refrigerator",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "browserify": "browserify js/helper/npm.helper.js > js/helper/helpers.js"
   },
   "repository": {
     "type": "git",
@@ -19,14 +19,15 @@
   "dependencies": {
     "handlebars": "^4.0.6",
     "handlebars-helpers": "^0.7.7",
-    "handlebars-loader": "^1.4.0",
-    "requirejs": "^2.3.2"
+    "jquery": "^3.1.1",
+    "requirejs": "^2.3.2",
+    "swag": "^0.7.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
     "grunt-contrib-handlebars": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-timer": "^0.6.0"
   }
 }
