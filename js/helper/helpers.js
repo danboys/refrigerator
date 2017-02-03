@@ -50007,8 +50007,7 @@ module.exports = function (str) {
     const WHITESPACE         = /\s/;
     const ALLOWED_TAGS_REGEX = /<(\w*)>/g;
 
-    var html = '', allowableTags = [], tagReplacement = '';
-    function striptags(html, allowableTags, tagReplacement) {
+    function striptags(html = '', allowableTags = [], tagReplacement = '') {
         var state = STATE_OUTPUT,
             depth = 0,
             output = '',

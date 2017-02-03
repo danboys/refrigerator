@@ -4,7 +4,9 @@
   "description": "refrigerator",
   "main": "",
   "scripts": {
-    "browserify": "browserify js/helper/npm.helper.js > js/helper/helpers.js"
+    "browserify": "browserify js/helper/npm.helper.js > js/helper/helpers.js",
+    "npm-install": "npm install",
+    "grunt-watch": "grunt watch"
   },
   "repository": {
     "type": "git",
@@ -19,15 +21,15 @@
   "dependencies": {
     "handlebars": "^4.0.6",
     "handlebars-helpers": "^0.7.7",
-    "jquery": "^3.1.1",
-    "requirejs": "^2.3.2",
-    "swag": "^0.7.0"
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-timer": "^0.6.0"
+    "grunt-timer": "^0.6.0",
+    "grunt-ttf2woff": "^1.0.0"
   }
 }

@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<!--<meta name="viewport" content="width=960">-->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-	<meta name="apple-mobile-web-app-title" content="냉장고를 부탁해"/>
+	<meta name="apple-mobile-web-app-title" content="냉장고를 부탁해" />
 	<meta property="og:title" content="냉장고를 부탁해">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="">
@@ -23,37 +23,42 @@
 	<script type="text/javascript" src="../../js/jquery/handlebars.min.js"></script>
 	<script type="text/javascript" src="../../js/jquery/underscore.js"></script>
 	<script type="text/javascript" src="../../js/jquery/backbone.js"></script>
+	<script type="text/javascript" src="../../js/jquery/async.min.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.common.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.util.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.init.js"></script>
-
-	<script type="text/javascript" src="../../js/templates/templates.js"></script>
-
 </head>
 <body>
-<div id='personContainer'></div>
+
+<div id="console">
+
+</div>
+
 <script type="text/javascript">
-	var mGroup = Backbone.Model.extend({
+	var json1 = "http://www.water.or.kr/upload/data/main/Law.json"
+	var json2 = "http://www.water.or.kr/main/getMyWaterDAMInfo.do?regionCd=1117053000"
+	var json3 = "http://www.water.or.kr/main/getLocationInfo.do"
+	var json4 = "http://www.water.or.kr/upload/data/main/Weather01.json"
+	var json5 = "http://www.water.or.kr/upload/data/main/Sense.json"
 
+
+	$.get( json1, function( data ) {
+		$( "#console" ).append('<div>json1</div>');
+	});
+	$.get( json2, function( data ) {
+		$( "#console" ).append('<div>json2</div>');
+	});
+	$.get( json3, function( data ) {
+		$( "#console" ).append('<div>json3</div>');
+	});
+	$.get( json4, function( data ) {
+		$( "#console" ).append('<div>json4</div>');
+	});
+	$.get( json5, function( data ) {
+		$( "#console" ).append('<div>json5</div>');
 	});
 
-	var vGroup = Backbone.View.extend({
-		el: $('#personContainer'),
-		render: function () {
-			var template = repri[sampl1];
-			var html = template({
-				name: "Tim",
-				age: 5
-			});
-			this.$el.html(html);
-		},
-		initialize: function () {
-		}
-	});
-	var GroupView = new vGroup();
-	$(document).ready(function () {
-		GroupView.render();
-	});
+
 </script>
 
 </body>

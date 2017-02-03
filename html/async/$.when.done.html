@@ -23,37 +23,52 @@
 	<script type="text/javascript" src="../../js/jquery/handlebars.min.js"></script>
 	<script type="text/javascript" src="../../js/jquery/underscore.js"></script>
 	<script type="text/javascript" src="../../js/jquery/backbone.js"></script>
+	<script type="text/javascript" src="../../js/jquery/async.min.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.common.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.util.js"></script>
 	<script type="text/javascript" src="../../js/ui/ui.init.js"></script>
-
-	<script type="text/javascript" src="../../js/templates/templates.js"></script>
-
 </head>
 <body>
-<div id='personContainer'></div>
+
+<div id="console">
+
+</div>
+
 <script type="text/javascript">
-	var mGroup = Backbone.Model.extend({
+	var json1 = "http://www.water.or.kr/upload/data/main/Law.json"
+	var json2 = "http://www.water.or.kr/main/getMyWaterDAMInfo.do?regionCd=1117053000"
+	var json3 = "http://www.water.or.kr/main/getLocationInfo.do"
+	var json4 = "http://www.water.or.kr/upload/data/main/Weather01.json"
+	var json5 = "http://www.water.or.kr/upload/data/main/Sense.json"
+	var text = [];
+	var text1,text2,text3,text4,text5;
+	$.when(
+			$.get(json1, function (data) {
+				text1 = 'json1';
+			}),
+			$.get(json2, function (data) {
+				text2 = 'json2';
+			}),
+			$.get(json3, function (data) {
+				text3 = 'json3';
+			}),
+			$.get(json4, function (data) {
+				text4 = 'json4';
+			}),
+			$.get(json5, function (data) {
+				text5 = 'json5';
+			})
+	).done(function (j1,j2,j3,j4,j5) {
+		text.push(text1);
+		text.push(text2);
+		text.push(text3);
+		text.push(text4);
+		text.push(text5);
+		console.log(text);
+		$('#console').append(text)
+	})
 
-	});
 
-	var vGroup = Backbone.View.extend({
-		el: $('#personContainer'),
-		render: function () {
-			var template = repri[sampl1];
-			var html = template({
-				name: "Tim",
-				age: 5
-			});
-			this.$el.html(html);
-		},
-		initialize: function () {
-		}
-	});
-	var GroupView = new vGroup();
-	$(document).ready(function () {
-		GroupView.render();
-	});
 </script>
 
 </body>

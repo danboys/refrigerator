@@ -22,3 +22,4 @@ ui.page.common.prototype = {
     _ready: function () {
     }
 };
+ 

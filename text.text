@@ -1,0 +1,26 @@
+@grunt-contrib-cssmin
+
+1. install
+
+npm install grunt-contrib-cssmin --save-dev
+
+2. Gruntfile.js
+
+cssmin: {
+    target: {
+        files: [{
+            expand: true,
+            cwd: 'release/css',
+            src: ['*.css', '!*.min.css'],
+            dest: 'release/css',
+            ext: '.min.css'
+        }]
+    }
+}
+
+grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+3. website
+
+https://www.npmjs.com/package/grunt-contrib-cssmin
+
